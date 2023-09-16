@@ -8,17 +8,38 @@ Title: 08 Printer #HouseholdPropsChallenge
 */
 
 import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
+import { useRef, useState } from "react";
+import * as THREE from "three";
 
-export default function Printer(props) {
+export default function Printer({ z = 0 }) {
   const { nodes, materials } = useGLTF("/printer-v2.glb");
+  const { viewport, camera } = useThree();
+  const { width, height } = viewport.getCurrentViewport(camera, [0, 0, z]);
   const ref = useRef();
+
+  const [data] = useState({
+    // Viewport goes from -1 to 1
+    x: THREE.MathUtils.randFloatSpread(2),
+    y: THREE.MathUtils.randFloatSpread(height),
+    rotationX: Math.random() * Math.PI,
+    rotationY: Math.random() * Math.PI,
+    rotationZ: Math.random() * Math.PI,
+  });
+
   useFrame(() => {
-    ref.current.rotation.y += 0.01;
+    ref.current.position.set(data.x * width, (data.y += 0.02), z);
+    ref.current.rotation.set(
+      (data.rotationX += 0.005),
+      (data.rotationY += 0.005),
+      (data.rotationZ += 0.005)
+    );
+    if (data.y > height / 2) {
+      data.y = -height;
+    }
   });
   return (
-    <group {...props} dispose={null} ref={ref}>
+    <group dispose={null} ref={ref} scale={7}>
       <mesh
         geometry={nodes.Cube_0.geometry}
         material={materials.Grey}

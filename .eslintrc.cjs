@@ -12,10 +12,26 @@ module.exports = {
   settings: { react: { version: "18.2" } },
   plugins: ["react-refresh"],
   rules: {
+    "react/prop-types": 0,
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
     ],
-    "react/no-unknown-property": "warn",
+    "react/no-unknown-property": [
+      1,
+      {
+        // r3f tags attributes are ignored
+        ignore: [
+          "position",
+          "rotation",
+          "geometry",
+          "material",
+          "dispose",
+          "intensity",
+          "args",
+          "attach",
+        ],
+      },
+    ],
   },
 };

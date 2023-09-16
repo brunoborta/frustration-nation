@@ -1,11 +1,11 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import Printer from "./Printer";
+import { Canvas } from "@react-three/fiber";
+import PrinterScreen from "./PrinterScreen";
 
 function App() {
   return (
-    <Canvas camera={{ position: [4, 2, 2] }}>
-      <ambientLight intensity={3} />
-      <Printer scale={8} />
+    <Canvas camera={{ fov: 35, near: 0.1, far: 100 }}>
+      <ambientLight />
+      <PrinterScreen printerCount={100} />
     </Canvas>
   );
 }
