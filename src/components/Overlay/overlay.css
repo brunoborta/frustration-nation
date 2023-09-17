@@ -1,23 +1,48 @@
 div.title-wrapper {
   position: absolute;
   top: 5vh;
-  left: 10vw;
+  left: 5vw;
+  right: 5vw;
+  @media (min-width: 1280px) {
+    left: 10vw;
+    right: 10vw;
+  }
 }
 
 p.highlight {
   position: absolute;
   bottom: 30vh;
-  left: 10vw;
+  left: 5vw;
   font-size: 1.5rem;
+  @media (min-width: 1024px) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 1280px) {
+    left: 10vw;
+    right: 10vw;
+  }
 }
 
 div.credits {
   position: absolute;
   bottom: 5vh;
-  left: 10vw;
+  left: 5vw;
+  @media (min-width: 1280px) {
+    left: 10vw;
+    right: 10vw;
+  }
 }
+
 
 div.credits a {
   color: black;
   text-underline-offset: 3px;
+}
+
+div.credits p {
+  font-size: 1rem;
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 }

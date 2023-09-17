@@ -7,15 +7,15 @@ import Overlay from "./components/Overlay";
 function App() {
   return (
     <>
-      <Suspense fallback={null}>
-        <Canvas
-          gl={{ antialias: false }}
-          camera={{ fov: 25, near: 0.1, far: 82 }}
-        >
-          {/* <Perf /> */}
+      <Canvas
+        gl={{ antialias: false }}
+        camera={{ fov: 25, near: 0.1, far: 82 }}
+      >
+        {/* <Perf /> */}
+        <Suspense fallback={null}>
           <PrinterScreen />
-        </Canvas>
-      </Suspense>
+        </Suspense>
+      </Canvas>
       <Overlay />
     </>
   );

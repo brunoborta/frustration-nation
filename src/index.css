@@ -14,11 +14,25 @@ html, body, #root {
 h1 {
   font-family: 'Hermooun';
   text-transform: uppercase;
-  font-size: 12em;
+  font-size: 5em;
   letter-spacing: 0.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 10em;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 12em;
+  }
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 1.5em;
   font-weight: 900;
+  @media (min-width: 768px) {
+    font-size: 2.5em;
+  }
+  @media (min-width: 1024px) {
+    font-size: 3em;
+  }
 }
