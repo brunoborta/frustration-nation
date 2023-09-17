@@ -1,0 +1,23 @@
+div.title-wrapper {
+  position: absolute;
+  top: 5vh;
+  left: 10vw;
+}
+
+p.highlight {
+  position: absolute;
+  bottom: 30vh;
+  left: 10vw;
+  font-size: 1.5rem;
+}
+
+div.credits {
+  position: absolute;
+  bottom: 5vh;
+  left: 10vw;
+}
+
+div.credits a {
+  color: black;
+  text-underline-offset: 3px;
+}
