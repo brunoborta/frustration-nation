@@ -9,18 +9,21 @@ div.title-wrapper {
   }
 }
 
-p.highlight {
+div.highlight {
   position: absolute;
   bottom: 30vh;
   left: 5vw;
-  font-size: 1.5rem;
-  @media (min-width: 1024px) {
-    font-size: 2.5rem;
-  }
-
+  
   @media (min-width: 1280px) {
     left: 10vw;
     right: 10vw;
+  }
+}
+
+div.highlight p {
+  font-size: 1.5rem;
+  @media (min-width: 1024px) {
+    font-size: 2.5rem;
   }
 }
 
@@ -33,7 +36,6 @@ div.credits {
     right: 10vw;
   }
 }
-
 
 div.credits a {
   color: black;

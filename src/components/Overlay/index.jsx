@@ -8,7 +8,10 @@ export default function Overlay() {
         <h1>Frustration Nation</h1>
         <h2>A game about printers to make you pissed!</h2>
       </div>
-      <p className="highlight">Game by Zeina Saade.</p>
+      <div className="highlight">
+        <p>Game by Zeina Saade.</p>
+        <p>Coming Soon!</p>
+      </div>
       <div className="credits">
         <p>
           Made with <HeartIcon className="heart" /> by{" "}
