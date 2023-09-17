@@ -30,6 +30,8 @@ module.exports = {
           "intensity",
           "args",
           "attach",
+          "object",
+          "skeleton",
         ],
       },
     ],
