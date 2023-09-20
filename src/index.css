@@ -16,6 +16,10 @@ h1 {
   text-transform: uppercase;
   font-size: 5rem;
   letter-spacing: 0.2rem;
+
+  background: linear-gradient(to left, #ccc, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   
   @media (min-width: 768px) {
     font-size: 10rem;
