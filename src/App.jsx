@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 
 import PrinterScreen from "./components/PrinterScreen";
@@ -12,9 +11,7 @@ function App() {
         camera={{ fov: 25, near: 0.1, far: 82 }}
       >
         {/* <Perf /> */}
-        <Suspense fallback={null}>
-          <PrinterScreen />
-        </Suspense>
+        <PrinterScreen />
       </Canvas>
       <Overlay />
     </>
